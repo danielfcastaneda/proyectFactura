@@ -9,15 +9,16 @@ using System.Windows.Forms;
 
 namespace proyectFactura.controller
 {
-    class Controller
+    class CIndex
     {
 
+        //metodo para verificar usuarios
 
         public void control(string usuario, string contrasena)
         {
-            Usuario user = new Usuario();
+            Usuario user = new Usuario(usuario, contrasena);
 
-          user.ConnsultaUsuario(usuario,contrasena);
+          user.ConnsultaUsuario();
 
            
         }

@@ -26,7 +26,7 @@ namespace proyectFactura
         private void Enviar_Click(object sender, EventArgs e)
         {
            
-            Controller control = new Controller();
+            CIndex control = new CIndex();
             
            control.control(txtUser.Text,txtPasword.Text);
 

@@ -11,13 +11,18 @@ namespace proyectFactura.model
 {
     class Usuario : Persona
     {
-        string contra;
-
-        string user;
-
+        private string contrasena;
+        private string nombreUsuario;
+        private string user;
+        private string contra;
         SqlConnection connect;
-
-        public void Ingreso(string usuario, string contrasena)
+        
+        public Usuario(string nombreUsuario, string contrasena)
+        {
+            this.nombreUsuario = nombreUsuario;
+            this.contrasena = contrasena;
+        }
+        public void Ingreso()
         {
             Conection cn = new Conection();
             
@@ -25,7 +30,7 @@ namespace proyectFactura.model
             
             connect.Open();
 
-            string cadena = "INSERT INTO usuario VALUES ('" + usuario + "','" + contrasena + "' );";
+            string cadena = "INSERT INTO usuario VALUES ('" + this.nombreUsuario + "','" + this.contrasena + "' );";
             
             SqlCommand comando = new SqlCommand(cadena, connect);
 
@@ -35,21 +40,24 @@ namespace proyectFactura.model
 
         }
 
-        public void ConnsultaUsuario(string usuario,string contrasena)
+        public void ConnsultaUsuario()
         {
+            
+
             Conection cn = new Conection();
             
             connect = cn.CreateConection();
 
             connect.Open();
 
-            string cadena = "SELECT nombre,contrasena FROM usuario  WHERE nombre = '" + usuario + "' and contrasena = '" + contrasena + "' ;";
+            string cadena = "SELECT nombre,contrasena FROM usuario  WHERE nombre = '" + this.nombreUsuario + "' and contrasena = '" + this.contrasena + "' ;";
 
             SqlCommand comando = new SqlCommand(cadena, connect);
             
             SqlDataReader resultado = comando.ExecuteReader();
 
-            while (resultado.Read()) {
+            while (resultado.Read()) 
+            {
 
                 user = resultado["nombre"].ToString();
 
@@ -58,7 +66,7 @@ namespace proyectFactura.model
                 
             }
 
-            if (user == usuario && contra == contrasena)
+            if (user == this.nombreUsuario && contra == this.contrasena)
             {
 
                 principal pr = new principal();

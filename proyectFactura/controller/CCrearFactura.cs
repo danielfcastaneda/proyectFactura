@@ -12,9 +12,9 @@ namespace proyectFactura.controller
 
         public void nuevaFactura(string idCliente, string nombreCliente, string apellidoCliente, string celular, string email,string genero,string vendedor) 
         {
-           Factura nuevaFactura = new Factura();
+           Factura nuevaFactura = new Factura(idCliente, nombreCliente, apellidoCliente, celular, email, genero, vendedor);
 
-           nuevaFactura.crearFacturaXml(idCliente,nombreCliente,apellidoCliente,celular,email,genero,vendedor);
+           nuevaFactura.crearFacturaXml();
         }
     }
 }

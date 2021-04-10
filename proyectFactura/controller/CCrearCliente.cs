@@ -12,9 +12,9 @@ namespace proyectFactura.controller
 
         public void nuevoCliente(string tipo, string id, string nombre, string apellido, string email,string genero) 
         {
-            cliente nuevoCliente = new cliente();
+            cliente nuevoCliente = new cliente(tipo, id, nombre, apellido, email, genero);
 
-            nuevoCliente.CrearCliente(tipo,id,nombre,apellido,email,genero);
+            nuevoCliente.CrearCliente();
         }
     }
 }

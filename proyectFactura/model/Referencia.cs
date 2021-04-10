@@ -9,8 +9,27 @@ namespace proyectFactura.model
 {
     class Referencia
     {
+        private string codigo1; 
+        private string codigo2;
+        private string nombreCorto;
+        private string nombreLargo;
+        private string descripcion;
+        private string precios;
         SqlConnection connect;
-        public void CrearReferencia(string codigo1, string codigo2, string nombreCorto, string nombreLargo, string descripcion, string precios)
+
+        public  Referencia(string codigo1, string codigo2, string nombreCorto, string nombreLargo, string descripcion, string precios) 
+        {
+            this.codigo1 = codigo1;
+            this.codigo2 = codigo2;
+            this.nombreCorto = nombreCorto;
+            this.nombreLargo = nombreLargo;
+            this.descripcion = descripcion;
+            this.precios = precios;
+            
+        }
+
+        
+        public void CrearReferencia()
         {
             Conection cn = new Conection();
 
@@ -18,7 +37,7 @@ namespace proyectFactura.model
 
             connect.Open();
 
-            string cadena = "INSERT INTO referencia VALUES ('" + codigo1 + "','" + codigo2 + "','" + nombreCorto + "','" + nombreLargo + "','" + descripcion + "','" + precios + "' );";
+            string cadena = "INSERT INTO referencia VALUES ('" + this.codigo1 + "','" + this.codigo2 + "','" + this.nombreCorto + "','" + this.nombreLargo + "','" + this.descripcion + "','" + this.precios + "' );";
 
             SqlCommand comando = new SqlCommand(cadena, connect);
 

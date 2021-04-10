@@ -8,11 +8,11 @@ namespace proyectFactura.model
 {
     class Persona
     {
-        string tipoIdentificacion;
-        string identificacion;
-        string nombres;
-        string apellidos;
-        string email;
-        string genero;
+       protected string tipoIdentificacion;
+       protected string identificacion;
+       protected string nombres;
+       protected string apellidos;
+       protected string email;
+       protected string genero;
     }
 }

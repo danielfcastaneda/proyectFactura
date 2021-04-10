@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="controller\CCrearFactura.cs" />
     <Compile Include="controller\CCrearReferencia.cs" />
-    <Compile Include="controller\Controller.cs" />
+    <Compile Include="controller\CIndex.cs" />
     <Compile Include="controller\CCrearCliente.cs" />
     <Compile Include="model\Factura.cs" />
     <Compile Include="model\Referencia.cs" />

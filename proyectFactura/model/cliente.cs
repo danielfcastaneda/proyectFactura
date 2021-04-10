@@ -9,8 +9,20 @@ namespace proyectFactura.model
 {
     class cliente : Persona
     {
+        
         SqlConnection connect;
-        public void CrearCliente(string tipoIdentificacion, string identificacion, string nombres, string apellidos, string email, string genero)
+
+        public cliente(string tipoIdentificacion, string identificacion, string nombres, string apellidos, string email, string genero) 
+        {
+            this.tipoIdentificacion = tipoIdentificacion;
+            this.identificacion = identificacion;
+            this.nombres = nombres;
+            this.apellidos = apellidos;
+            this.email = email;
+            this.genero = genero;
+
+        }
+        public void CrearCliente()
         {
             Conection cn = new Conection();
 
@@ -18,7 +30,7 @@ namespace proyectFactura.model
 
             connect.Open();
 
-            string cadena = "INSERT INTO cliente VALUES ('" + tipoIdentificacion + "','" + identificacion + "','" + nombres + "','" + apellidos + "','" + email + "','" + genero + "' );";
+            string cadena = "INSERT INTO cliente VALUES ('" + this.tipoIdentificacion + "','" + this.identificacion + "','" + this.nombres + "','" + this.apellidos + "','" + this.email + "','" + this.genero + "' );";
 
             SqlCommand comando = new SqlCommand(cadena, connect);
 

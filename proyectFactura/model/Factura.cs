@@ -10,8 +10,27 @@ namespace proyectFactura.model
 {
     class Factura
     {
+        private string  idCliente;
+        private string nombreCliente;
+        private string apellidoCliente;
+        private string celular;
+        private string email;
+        private string genero;
+        private string vendedor;
         SqlConnection connect;
-        public void CrearFactura(string idCliente, string nombreCliente, string apellidoCliente, string celular, string email, string genero, string vendedor)
+
+        public Factura(string idCliente, string nombreCliente, string apellidoCliente, string celular, string email, string genero, string vendedor) 
+        {
+            this.idCliente = idCliente;
+            this.nombreCliente = nombreCliente;
+            this.apellidoCliente = apellidoCliente;
+            this.celular = celular;
+            this.email = email;
+            this.genero = genero;
+            this.vendedor = vendedor;
+
+        }
+        public void CrearFactura()
         {
             Conection cn = new Conection();
 
@@ -19,7 +38,7 @@ namespace proyectFactura.model
 
             connect.Open();
 
-            string cadena = "INSERT INTO factura VALUES ('" + idCliente + "','" + nombreCliente + "','" + apellidoCliente + "','" + celular + "','" + email + "','" + genero + "','" + vendedor + "' );";
+            string cadena = "INSERT INTO factura VALUES ('" + this.idCliente + "','" + this.nombreCliente + "','" + this.apellidoCliente + "','" + this.celular + "','" + this.email + "','" + this.genero + "','" + this.vendedor + "' );";
 
             SqlCommand comando = new SqlCommand(cadena, connect);
 
@@ -29,7 +48,7 @@ namespace proyectFactura.model
 
         }
 
-        public void crearFacturaXml(string idCliente, string nombreCliente, string apellidoCliente, string celular, string email, string genero, string vendedor)
+        public void crearFacturaXml()
         {
             XmlDocument documento = new XmlDocument();
             XmlDeclaration declaration = documento.CreateXmlDeclaration("1.0", "UTF-8", null);
@@ -54,13 +73,13 @@ namespace proyectFactura.model
             xEncabezado.AppendChild(xGenero);
             xEncabezado.AppendChild(xVendedor);
 
-            XmlText tIdCliente = documento.CreateTextNode(idCliente);
-            XmlText tNombreCliente = documento.CreateTextNode(nombreCliente);
-            XmlText tApellidoCliente = documento.CreateTextNode(apellidoCliente);
-            XmlText tCelular = documento.CreateTextNode(celular);
-            XmlText tEmail = documento.CreateTextNode(email);
-            XmlText tGenero = documento.CreateTextNode(genero);
-            XmlText tVendedor = documento.CreateTextNode(vendedor);
+            XmlText tIdCliente = documento.CreateTextNode(this.idCliente);
+            XmlText tNombreCliente = documento.CreateTextNode(this.nombreCliente);
+            XmlText tApellidoCliente = documento.CreateTextNode(this.apellidoCliente);
+            XmlText tCelular = documento.CreateTextNode(this.celular);
+            XmlText tEmail = documento.CreateTextNode(this.email);
+            XmlText tGenero = documento.CreateTextNode(this.genero);
+            XmlText tVendedor = documento.CreateTextNode(this.vendedor);
 
             xIDCliente.AppendChild(tIdCliente);
             xNombreCliente.AppendChild(tNombreCliente);
