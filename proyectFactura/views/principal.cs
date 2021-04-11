@@ -16,7 +16,9 @@ namespace proyectFactura.views
     {
 
         private static bool SeleccionMovimiento { get; set; } = false;
-        public principal()
+        public static string nombreUsuario  = "";
+        
+    public principal()
         {
             InitializeComponent();
         }
@@ -83,6 +85,7 @@ namespace proyectFactura.views
         //metodo cargar el archivo de inicio cuando se cargue el formulario
         private void principal_Load(object sender, EventArgs e)
         {
+            lblUsuario.Text +=  nombreUsuario;
             webBrowser1.Navigate("C:\\Users\\daniel.castaneda\\Desktop\\procesados\\inicio.html");
         }
 

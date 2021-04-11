@@ -56,6 +56,7 @@ namespace proyectFactura.views
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -271,12 +272,22 @@ namespace proyectFactura.views
             this.webBrowser1.Size = new System.Drawing.Size(1327, 493);
             this.webBrowser1.TabIndex = 5;
             // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(34, 653);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
+            this.lblUsuario.TabIndex = 6;
+            this.lblUsuario.Text = "Usuario:";
+            // 
             // principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1354, 647);
+            this.ClientSize = new System.Drawing.Size(1354, 686);
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtBusqueda);
@@ -323,5 +334,6 @@ namespace proyectFactura.views
         private WebBrowser webBrowser1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private Label lblUsuario;
     }
 }

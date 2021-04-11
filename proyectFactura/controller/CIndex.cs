@@ -1,4 +1,5 @@
 ﻿using proyectFactura.model;
+using proyectFactura.views;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -17,6 +18,8 @@ namespace proyectFactura.controller
         public void control(string usuario, string contrasena)
         {
             Usuario user = new Usuario(usuario, contrasena);
+
+            principal.nombreUsuario = usuario;
 
           user.ConnsultaUsuario();
 
