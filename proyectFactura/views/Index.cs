@@ -20,15 +20,18 @@ namespace proyectFactura
         }
 
        
-        //evento para hacer la validacion e ingresar al sistema
+        //evento para hacer la validacion e ingresar al sistema y dejar los campos vacios
         
         
         private void Enviar_Click(object sender, EventArgs e)
         {
            
-            CIndex control = new CIndex();
+           CIndex control = new CIndex();
             
            control.control(txtUser.Text,txtPasword.Text);
+
+            txtUser.Text = "";
+            txtPasword.Text = "";
 
            
         }
@@ -44,6 +47,11 @@ namespace proyectFactura
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

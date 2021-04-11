@@ -50,7 +50,16 @@ namespace proyectFactura.views
             this.notaCreditoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.verToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -63,7 +72,7 @@ namespace proyectFactura.views
             this.movimientosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1296, 37);
+            this.menuStrip1.Size = new System.Drawing.Size(1354, 37);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -167,20 +176,21 @@ namespace proyectFactura.views
             this.crearToolStripMenuItem2,
             this.verToolStripMenuItem2});
             this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
-            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(175, 34);
+            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
             this.facturaToolStripMenuItem.Text = "Factura";
+            this.facturaToolStripMenuItem.Click += new System.EventHandler(this.facturaToolStripMenuItem_Click);
             // 
             // crearToolStripMenuItem2
             // 
             this.crearToolStripMenuItem2.Name = "crearToolStripMenuItem2";
-            this.crearToolStripMenuItem2.Size = new System.Drawing.Size(124, 34);
+            this.crearToolStripMenuItem2.Size = new System.Drawing.Size(180, 34);
             this.crearToolStripMenuItem2.Text = "Crear";
             this.crearToolStripMenuItem2.Click += new System.EventHandler(this.crearToolStripMenuItem2_Click);
             // 
             // verToolStripMenuItem2
             // 
             this.verToolStripMenuItem2.Name = "verToolStripMenuItem2";
-            this.verToolStripMenuItem2.Size = new System.Drawing.Size(124, 34);
+            this.verToolStripMenuItem2.Size = new System.Drawing.Size(180, 34);
             this.verToolStripMenuItem2.Text = "Ver";
             // 
             // notaCreditoToolStripMenuItem
@@ -189,7 +199,7 @@ namespace proyectFactura.views
             this.crearToolStripMenuItem3,
             this.verToolStripMenuItem3});
             this.notaCreditoToolStripMenuItem.Name = "notaCreditoToolStripMenuItem";
-            this.notaCreditoToolStripMenuItem.Size = new System.Drawing.Size(175, 34);
+            this.notaCreditoToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
             this.notaCreditoToolStripMenuItem.Text = "Nota Credito";
             // 
             // crearToolStripMenuItem3
@@ -204,20 +214,85 @@ namespace proyectFactura.views
             this.verToolStripMenuItem3.Size = new System.Drawing.Size(124, 34);
             this.verToolStripMenuItem3.Text = "Ver";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gold;
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(10, 46);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1332, 60);
+            this.panel1.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::proyectFactura.Properties.Resources.grupo;
+            this.pictureBox2.Location = new System.Drawing.Point(84, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(52, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::proyectFactura.Properties.Resources.referencias;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(52, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.Location = new System.Drawing.Point(12, 112);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(115, 20);
+            this.txtBusqueda.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(133, 112);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(68, 20);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(15, 142);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(1327, 493);
+            this.webBrowser1.TabIndex = 5;
+            // 
             // principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1296, 493);
+            this.ClientSize = new System.Drawing.Size(1354, 647);
+            this.Controls.Add(this.webBrowser1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtBusqueda);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "principal";
             this.Text = "Menu Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,5 +317,11 @@ namespace proyectFactura.views
         private ToolStripMenuItem notaCreditoToolStripMenuItem;
         private ToolStripMenuItem crearToolStripMenuItem3;
         private ToolStripMenuItem verToolStripMenuItem3;
+        private Panel panel1;
+        private TextBox txtBusqueda;
+        private Button button1;
+        private WebBrowser webBrowser1;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }

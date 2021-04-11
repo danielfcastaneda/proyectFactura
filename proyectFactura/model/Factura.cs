@@ -8,8 +8,10 @@ using System.Xml;
 
 namespace proyectFactura.model
 {
+
     class Factura
     {
+        
         private string  idCliente;
         private string nombreCliente;
         private string apellidoCliente;

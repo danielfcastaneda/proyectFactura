@@ -1,4 +1,6 @@
-﻿using System;
+﻿using proyectFactura.controller;
+using proyectFactura.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace proyectFactura.views
 {
     public partial class principal : Form
     {
+
+        private static bool SeleccionMovimiento { get; set; } = false;
         public principal()
         {
             InitializeComponent();
@@ -74,6 +78,47 @@ namespace proyectFactura.views
         {
             crearFactura nuevaFactura = new crearFactura();
             nuevaFactura.Show();
+        }
+
+        //metodo cargar el archivo de inicio cuando se cargue el formulario
+        private void principal_Load(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate("C:\\Users\\daniel.castaneda\\Desktop\\procesados\\inicio.html");
+        }
+
+        // crear evento a la imagen para que se dirija al form de visualizacion de referenciencias
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            verReferencias referencias = new verReferencias();
+
+            referencias.Show();
+
+        }
+
+        // crear evento a la imagen para que se dirija al form de visualizacion de clientes
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            verClientes listado = new verClientes();
+
+            listado.Show();
+
+        }
+
+        //evento para mostrar el formulario de la factura
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (SeleccionMovimiento == true && txtBusqueda.Text == "?" ) 
+            {
+                crearFactura newF = new crearFactura();
+                newF.Show();
+                txtBusqueda.Text = "";
+            }
+        }
+
+        //evento que permite conocer si se encuentra en el modulo de factura
+        private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SeleccionMovimiento = true;
         }
     }
 }

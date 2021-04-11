@@ -39,18 +39,15 @@ namespace proyectFactura
             this.label1 = new System.Windows.Forms.Label();
             this.txtPasword = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
-            this.panel1.Controls.Add(this.Enviar);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtPasword);
-            this.panel1.Controls.Add(this.txtUser);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1346, 618);
@@ -59,10 +56,10 @@ namespace proyectFactura
             // 
             // Enviar
             // 
-            this.Enviar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Enviar.BackColor = System.Drawing.Color.MidnightBlue;
             this.Enviar.Font = new System.Drawing.Font("Myanmar Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Enviar.ForeColor = System.Drawing.Color.White;
-            this.Enviar.Location = new System.Drawing.Point(602, 371);
+            this.Enviar.Location = new System.Drawing.Point(80, 268);
             this.Enviar.Name = "Enviar";
             this.Enviar.Size = new System.Drawing.Size(145, 40);
             this.Enviar.TabIndex = 5;
@@ -75,18 +72,19 @@ namespace proyectFactura
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Myanmar Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Orange;
-            this.label3.Location = new System.Drawing.Point(626, 250);
+            this.label3.Location = new System.Drawing.Point(108, 164);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 34);
             this.label3.TabIndex = 4;
             this.label3.Text = "Password";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Myanmar Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Orange;
-            this.label2.Location = new System.Drawing.Point(635, 153);
+            this.label2.Location = new System.Drawing.Point(108, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 34);
             this.label2.TabIndex = 3;
@@ -97,8 +95,8 @@ namespace proyectFactura
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Myanmar Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(565, 46);
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label1.Location = new System.Drawing.Point(53, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(194, 62);
             this.label1.TabIndex = 2;
@@ -108,7 +106,7 @@ namespace proyectFactura
             // 
             this.txtPasword.BackColor = System.Drawing.Color.OldLace;
             this.txtPasword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPasword.Location = new System.Drawing.Point(602, 311);
+            this.txtPasword.Location = new System.Drawing.Point(80, 214);
             this.txtPasword.Name = "txtPasword";
             this.txtPasword.Size = new System.Drawing.Size(145, 20);
             this.txtPasword.TabIndex = 1;
@@ -118,10 +116,24 @@ namespace proyectFactura
             // 
             this.txtUser.BackColor = System.Drawing.Color.OldLace;
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUser.Location = new System.Drawing.Point(602, 202);
+            this.txtUser.Location = new System.Drawing.Point(80, 119);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(145, 20);
             this.txtUser.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.Enviar);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.txtPasword);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.txtUser);
+            this.panel2.Location = new System.Drawing.Point(518, 194);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(313, 337);
+            this.panel2.TabIndex = 6;
             // 
             // Index
             // 
@@ -135,7 +147,8 @@ namespace proyectFactura
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Index_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -149,6 +162,7 @@ namespace proyectFactura
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Enviar;
+        private Panel panel2;
     }
 }
 

@@ -120,6 +120,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="views\principal.resx">
       <DependentUpon>principal.cs</DependentUpon>
@@ -142,6 +143,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\referencia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grupo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\referencia1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\referencias.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
