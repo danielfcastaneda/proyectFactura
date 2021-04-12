@@ -125,7 +125,7 @@ namespace proyectFactura.views
             // 
             // txtCodigo1
             // 
-            this.txtCodigo1.ForeColor = System.Drawing.Color.OldLace;
+            this.txtCodigo1.ForeColor = System.Drawing.Color.Black;
             this.txtCodigo1.Location = new System.Drawing.Point(387, 121);
             this.txtCodigo1.Name = "txtCodigo1";
             this.txtCodigo1.Size = new System.Drawing.Size(180, 20);
@@ -133,7 +133,7 @@ namespace proyectFactura.views
             // 
             // txtCodigo2
             // 
-            this.txtCodigo2.ForeColor = System.Drawing.Color.OldLace;
+            this.txtCodigo2.ForeColor = System.Drawing.Color.Black;
             this.txtCodigo2.Location = new System.Drawing.Point(387, 153);
             this.txtCodigo2.Name = "txtCodigo2";
             this.txtCodigo2.Size = new System.Drawing.Size(180, 20);
@@ -141,7 +141,7 @@ namespace proyectFactura.views
             // 
             // txtNombreCorto
             // 
-            this.txtNombreCorto.ForeColor = System.Drawing.Color.OldLace;
+            this.txtNombreCorto.ForeColor = System.Drawing.Color.Black;
             this.txtNombreCorto.Location = new System.Drawing.Point(387, 189);
             this.txtNombreCorto.Name = "txtNombreCorto";
             this.txtNombreCorto.Size = new System.Drawing.Size(180, 20);
@@ -149,7 +149,7 @@ namespace proyectFactura.views
             // 
             // txtNombreLargo
             // 
-            this.txtNombreLargo.ForeColor = System.Drawing.Color.OldLace;
+            this.txtNombreLargo.ForeColor = System.Drawing.Color.Black;
             this.txtNombreLargo.Location = new System.Drawing.Point(387, 220);
             this.txtNombreLargo.Name = "txtNombreLargo";
             this.txtNombreLargo.Size = new System.Drawing.Size(180, 20);
@@ -157,7 +157,7 @@ namespace proyectFactura.views
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.ForeColor = System.Drawing.Color.OldLace;
+            this.txtDescripcion.ForeColor = System.Drawing.Color.Black;
             this.txtDescripcion.Location = new System.Drawing.Point(387, 256);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(180, 20);
@@ -165,7 +165,7 @@ namespace proyectFactura.views
             // 
             // txtPrecios
             // 
-            this.txtPrecios.ForeColor = System.Drawing.Color.OldLace;
+            this.txtPrecios.ForeColor = System.Drawing.Color.Black;
             this.txtPrecios.Location = new System.Drawing.Point(387, 285);
             this.txtPrecios.Name = "txtPrecios";
             this.txtPrecios.Size = new System.Drawing.Size(180, 20);

@@ -83,7 +83,7 @@ namespace proyectFactura.views
         }
 
         //metodo cargar el archivo de inicio cuando se cargue el formulario
-        private void principal_Load(object sender, EventArgs e)
+        public void principal_Load(object sender, EventArgs e)
         {
             lblUsuario.Text +=  nombreUsuario;
             webBrowser1.Navigate("C:\\Users\\daniel.castaneda\\Desktop\\procesados\\inicio.html");
@@ -115,6 +115,7 @@ namespace proyectFactura.views
                 crearFactura newF = new crearFactura();
                 newF.Show();
                 txtBusqueda.Text = "";
+              
             }
         }
 
@@ -122,6 +123,7 @@ namespace proyectFactura.views
         private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SeleccionMovimiento = true;
+            webBrowser1.Navigate("C:\\Users\\daniel.castaneda\\Desktop\\procesados\\factura.xml");
         }
     }
 }

@@ -22,9 +22,13 @@ namespace proyectFactura.views
         private void button1_Click(object sender, EventArgs e)
         {
             CCrearFactura factura = new CCrearFactura();
-
+            
             factura.nuevaFactura(txtIdCliente.Text,txtNombreCliente.Text,txtApellidoCliente.Text,txtCelular.Text,txtEmail.Text,txtGenero.Text,txtVendedor.Text);
+
+
+           
             this.Close();
+            
         }
 
         private void txtNombreCliente_TextChanged(object sender, EventArgs e)

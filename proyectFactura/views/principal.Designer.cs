@@ -47,9 +47,6 @@ namespace proyectFactura.views
             this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.verToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.notaCreditoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.verToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -110,21 +107,21 @@ namespace proyectFactura.views
             // crearToolStripMenuItem
             // 
             this.crearToolStripMenuItem.Name = "crearToolStripMenuItem";
-            this.crearToolStripMenuItem.Size = new System.Drawing.Size(143, 34);
+            this.crearToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
             this.crearToolStripMenuItem.Text = "Crear";
             this.crearToolStripMenuItem.Click += new System.EventHandler(this.crearToolStripMenuItem_Click);
             // 
             // verToolStripMenuItem
             // 
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(143, 34);
+            this.verToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
             this.verToolStripMenuItem.Text = "Ver";
             this.verToolStripMenuItem.Click += new System.EventHandler(this.verToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(143, 34);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
@@ -164,8 +161,7 @@ namespace proyectFactura.views
             // 
             this.movimientosToolStripMenuItem.BackColor = System.Drawing.Color.Lavender;
             this.movimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.facturaToolStripMenuItem,
-            this.notaCreditoToolStripMenuItem});
+            this.facturaToolStripMenuItem});
             this.movimientosToolStripMenuItem.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.movimientosToolStripMenuItem.Name = "movimientosToolStripMenuItem";
             this.movimientosToolStripMenuItem.Size = new System.Drawing.Size(116, 33);
@@ -193,27 +189,6 @@ namespace proyectFactura.views
             this.verToolStripMenuItem2.Name = "verToolStripMenuItem2";
             this.verToolStripMenuItem2.Size = new System.Drawing.Size(180, 34);
             this.verToolStripMenuItem2.Text = "Ver";
-            // 
-            // notaCreditoToolStripMenuItem
-            // 
-            this.notaCreditoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearToolStripMenuItem3,
-            this.verToolStripMenuItem3});
-            this.notaCreditoToolStripMenuItem.Name = "notaCreditoToolStripMenuItem";
-            this.notaCreditoToolStripMenuItem.Size = new System.Drawing.Size(180, 34);
-            this.notaCreditoToolStripMenuItem.Text = "Nota Credito";
-            // 
-            // crearToolStripMenuItem3
-            // 
-            this.crearToolStripMenuItem3.Name = "crearToolStripMenuItem3";
-            this.crearToolStripMenuItem3.Size = new System.Drawing.Size(124, 34);
-            this.crearToolStripMenuItem3.Text = "Crear";
-            // 
-            // verToolStripMenuItem3
-            // 
-            this.verToolStripMenuItem3.Name = "verToolStripMenuItem3";
-            this.verToolStripMenuItem3.Size = new System.Drawing.Size(124, 34);
-            this.verToolStripMenuItem3.Text = "Ver";
             // 
             // panel1
             // 
@@ -325,13 +300,10 @@ namespace proyectFactura.views
         private ToolStripMenuItem facturaToolStripMenuItem;
         private ToolStripMenuItem crearToolStripMenuItem2;
         private ToolStripMenuItem verToolStripMenuItem2;
-        private ToolStripMenuItem notaCreditoToolStripMenuItem;
-        private ToolStripMenuItem crearToolStripMenuItem3;
-        private ToolStripMenuItem verToolStripMenuItem3;
         private Panel panel1;
         private TextBox txtBusqueda;
         private Button button1;
-        private WebBrowser webBrowser1;
+        public  WebBrowser webBrowser1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Label lblUsuario;

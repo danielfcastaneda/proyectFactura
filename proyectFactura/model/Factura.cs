@@ -1,10 +1,12 @@
-﻿using System;
+﻿using proyectFactura.views;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Xsl;
 
 namespace proyectFactura.model
 {
@@ -52,11 +54,12 @@ namespace proyectFactura.model
 
         public void crearFacturaXml()
         {
+
             XmlDocument documento = new XmlDocument();
             XmlDeclaration declaration = documento.CreateXmlDeclaration("1.0", "UTF-8", null);
+         
             XmlElement root = documento.DocumentElement;
             documento.InsertBefore(declaration,root);
-
             XmlElement xEncabezado = documento.CreateElement(string.Empty, "encabezado", string.Empty);
             XmlElement xIDCliente = documento.CreateElement(string.Empty,"idCliente",string.Empty);
             XmlElement xNombreCliente = documento.CreateElement(string.Empty, "nombreCliente", string.Empty);
@@ -91,7 +94,12 @@ namespace proyectFactura.model
             xGenero.AppendChild(tGenero);
             xVendedor.AppendChild(tVendedor);
 
-            documento.Save("C:\\Users\\daniel.castaneda\\Desktop\\procesados\\primer_factura.xml");
+            documento.Save("C:\\Users\\daniel.castaneda\\Desktop\\procesados\\factura.xml");
+            
+
+            
+            //----------------------------------------------------------------------------------------------------------------------
+
         }
         
     }

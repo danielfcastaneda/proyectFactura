@@ -15,6 +15,7 @@ namespace proyectFactura.controller
            Factura nuevaFactura = new Factura(idCliente, nombreCliente, apellidoCliente, celular, email, genero, vendedor);
 
            nuevaFactura.crearFacturaXml();
+
         }
     }
 }
